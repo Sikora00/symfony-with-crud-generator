@@ -42,3 +42,6 @@
 
 # PHPSTORM
 .idea
+
+# COMPOSER
+vendor
