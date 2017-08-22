@@ -5,7 +5,7 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 /**
- * @ORM\Entity(repositoryClass="\AppBundle\Entity\Repository\ProviderRepository")
+ * @ORM\Entity(repositoryClass="\AppBundle\Entity\Repository\TestRepository")
  * @ORM\Table(name="test")
  */
 class Test
@@ -24,44 +24,67 @@ class Test
      * @ORM\Column(type="string")
      */
     protected $text;
+    /**
+     * @ORM\Column(type="integer")
+     */
+    protected $number;
+
+
     public function __construct(string $name, string $text)
     {
         $this->name = $name;
         $this->text = $text;
     }
+
     /**
-     * @return mixed
+     * @return int
      */
-    public function getId()
+    public function getId(): int
     {
         return $this->id;
     }
     /**
-     * @return mixed
+     * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
     /**
-     * @param mixed $name
+     * @param string $name
      */
-    public function setName($name)
+    public function setName(string $name)
     {
         $this->name = $name;
     }
     /**
-     * @return mixed
+     * @return string
      */
-    public function getText()
+    public function getText(): string
     {
         return $this->text;
     }
     /**
-     * @param mixed $text
+     * @param string $text
      */
-    public function setText($text)
+    public function setText(string $text)
     {
         $this->text = $text;
+    }
+
+    /**
+     * @return int | null
+     */
+    public function getNumber(): ?int
+    {
+        return $this->number;
+    }
+
+    /**
+     * @param int | null $number
+     */
+    public function setNumber(?int $number): void
+    {
+        $this->number = $number;
     }
 }
