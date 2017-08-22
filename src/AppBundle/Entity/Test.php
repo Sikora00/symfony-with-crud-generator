@@ -5,7 +5,7 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 /**
- * @ORM\Entity(repositoryClass="\AppBundle\Entity\Repository\ProviderRepository")
+ * @ORM\Entity(repositoryClass="\AppBundle\Entity\Repository\TestRepository")
  * @ORM\Table(name="test")
  */
 class Test
@@ -24,10 +24,8 @@ class Test
      * @ORM\Column(type="string")
      */
     protected $text;
-    public function __construct(string $name, string $text)
+    public function __construct()
     {
-        $this->name = $name;
-        $this->text = $text;
     }
     /**
      * @return mixed
