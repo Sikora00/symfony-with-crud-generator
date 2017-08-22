@@ -28,35 +28,35 @@ class Test
     {
     }
     /**
-     * @return mixed
+     * @return int
      */
     public function getId()
     {
         return $this->id;
     }
     /**
-     * @return mixed
+     * @return string
      */
     public function getName()
     {
         return $this->name;
     }
     /**
-     * @param mixed $name
+     * @param string $name
      */
     public function setName($name)
     {
         $this->name = $name;
     }
     /**
-     * @return mixed
+     * @return string
      */
     public function getText()
     {
         return $this->text;
     }
     /**
-     * @param mixed $text
+     * @param string $text
      */
     public function setText($text)
     {
